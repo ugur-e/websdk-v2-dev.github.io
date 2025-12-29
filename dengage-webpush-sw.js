@@ -1,8 +1,1 @@
-var swUrl = new URL(location);
-var accountId = swUrl.searchParams.get('account_id') || '';
-var appGuid = swUrl.searchParams.get('app_guid') || '';
-var version = swUrl.searchParams.get('version') || '';
-var hash = swUrl.searchParams.get('hash') || '';
-if (accountId && appGuid) {
-  importScripts("https://dev.lib.dengage.com/p/push/" + accountId + "/" + appGuid + "/sdk/" + version + "/dengage_sw."+ hash +".js");
-}
+var a=new URL(location),b="searchParams",c="get",d=a[b][c]("account_id"),e=a[b][c]("app_guid"),f=a[b][c]("version"),g=a[b][c]("hash");if(d&&e){console.log("https://dev.lib.dengage.com/p/push/"+d+"/"+e+(f?("/sdk/"+f):"")+"/dengage_sw"+(g?("."+g):"")+".js")}
